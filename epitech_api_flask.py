@@ -194,6 +194,23 @@ def get_user_files():
     except Exception as e:
         return json.dumps({"error":{"message":str(e), "code":500}}), 500
 
+@app.route('/user/flags' ,methods=['GET'])
+def get_user_flags():
+    method = request.method
+    error, session, params = log_and_check_params(["token", "login"], request)
+    if error != {}:
+        return json.dumps(error), error['error']['code']
+    try:
+        r = session.post(server_url+"/user/%s/flags/?format=json" % params['login'], verify=ssl_verify )
+        if r.status_code == 403:
+            if "// Epitech JSON webservice" in r.text:
+                return clean_json(r.text), 403
+            else:
+                return json.dumps({"error": {"message": "Connection token is invalid or has expired", 'code':403}}), 403
+        return clean_json(r.text)
+    except Exception as e:
+        return json.dumps({"error":{"message":str(e), "code":500}}), 500
+
 
 @app.route('/allmodules', methods=['GET'])
 def allmodules():
