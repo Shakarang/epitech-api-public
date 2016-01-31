@@ -2426,3 +2426,144 @@ The server always returns JSON responses.
 </pre>
 
 </pre>
+
+* * *
+
+**Get marks of project**
+
+**/project/marks GET**
+
+<pre><font color="red">"token":"42",        
+"scolaryear":2014,
+"codemodule":"B-GPR-360-0",
+"codeinstance":"PAR-6-1",
+"codeacti":"acti-167486",</font> 
+</pre>
+
+
+<pre>Response
+[
+    {
+        "type": "-",
+        "slug": "Bulletin_2013_STG-2-junger_m-fr.pdf",
+        "title": "Bulletin_2013_STG-2-junger_m-fr.pdf",
+        "secure": true,
+        "synchro": false,
+        "archive": false,
+        "language": "FR",
+        "size": 23221,
+        "ctime": "2014-07-22 11:22:35",
+        "mtime": "2014-07-22 11:22:35",
+        "mime": "application\/pdf",
+        "isLeaf": false,
+        "noFolder": false,
+        "rights": {
+            "ged_read": 1
+        },
+        "modifier": {
+            "login": "brosiu_l",
+            "title": "lionel brosius",
+            "picture": "https:\/\/cdn.local.epitech.eu\/userprofil\/brosiu_l.bmp"
+        },
+        "fullpath": "\/user\/junger_m\/document\/Bulletin_2013_STG-2-junger_m-fr.pdf"
+    },
+    {
+        "type": "-",
+        "slug": "Bulletin_2013_STG_Bachelor-junger_m-fr.pdf",
+        "title": "Bulletin_2013_STG_Bachelor-junger_m-fr.pdf",
+        "secure": true,
+        "synchro": false,
+        "archive": false,
+        "language": "FR",
+        "size": 21041,
+        "ctime": "2014-02-25 09:03:03",
+        "mtime": "2014-02-25 09:03:03",
+        "mime": "application\/pdf",
+        "isLeaf": false,
+        "noFolder": false,
+        "rights": {
+            "ged_read": 1
+        },
+        "modifier": {
+            "login": "brosiu_l",
+            "title": "lionel brosius",
+            "picture": "https:\/\/cdn.local.epitech.eu\/userprofil\/brosiu_l.bmp"
+        },
+        "fullpath": "\/user\/junger_m\/document\/Bulletin_2013_STG_Bachelor-junger_m-fr.pdf"
+    },
+    {
+        "type": "-",
+        "slug": "Bulletin_2014_STG-3-junger_m-fr.pdf",
+        "title": "Bulletin_2014_STG-3-junger_m-fr.pdf",
+        "secure": true,
+        "synchro": false,
+        "archive": false,
+        "language": "FR",
+        "size": 18846,
+        "ctime": "2015-02-26 18:37:48",
+        "mtime": "2015-02-26 18:37:48",
+        "mime": "application\/pdf",
+        "isLeaf": false,
+        "noFolder": false,
+        "rights": {
+            "ged_read": 1
+        },
+        "modifier": {
+            "login": "gailla_b",
+            "title": "benjamin gaillard",
+            "picture": "https:\/\/cdn.local.epitech.eu\/userprofil\/gailla_b.bmp"
+        },
+        "fullpath": "\/user\/junger_m\/document\/Bulletin_2014_STG-3-junger_m-fr.pdf"
+    },
+    {
+        "type": "-",
+        "slug": "Bulletin_2014_STG-4-junger_m-fr.pdf",
+        "title": "Bulletin_2014_STG-4-junger_m-fr.pdf",
+        "secure": true,
+        "synchro": false,
+        "archive": false,
+        "language": "FR",
+        "size": 21137,
+        "ctime": "2015-07-31 19:16:20",
+        "mtime": "2015-07-31 19:16:20",
+        "mime": "application\/pdf",
+        "isLeaf": false,
+        "noFolder": false,
+        "rights": {
+            "ged_read": 1
+        },
+        "modifier": {
+            "login": "gailla_b",
+            "title": "benjamin gaillard",
+            "picture": "https:\/\/cdn.local.epitech.eu\/userprofil\/gailla_b.bmp"
+        },
+        "fullpath": "\/user\/junger_m\/document\/Bulletin_2014_STG-4-junger_m-fr.pdf"
+    },
+    {
+        "type": "-",
+        "slug": "Convention-Stage-junger_m-FR-tech_1.pdf",
+        "title": "Convention Stage junger_m FR-tech_1.pdf",
+        "secure": true,
+        "synchro": false,
+        "archive": false,
+        "language": "FR",
+        "size": 68846,
+        "ctime": "2014-05-15 07:55:20",
+        "mtime": "2014-05-15 07:55:20",
+        "mime": "application\/pdf",
+        "isLeaf": false,
+        "noFolder": false,
+        "rights": {
+            "ged_read": 1
+        },
+        "modifier": {
+            "login": "clauss_m",
+            "title": "melanie clauss",
+            "picture": "https:\/\/cdn.local.epitech.eu\/userprofil\/clauss_m.bmp"
+        },
+        "fullpath": "\/user\/junger_m\/document\/Convention-Stage-junger_m-FR-tech_1.pdf"
+    }
+]
+</pre>
+
+</pre>

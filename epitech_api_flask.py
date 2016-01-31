@@ -177,6 +177,8 @@ def get_file():
     except Exception as e:
         return json.dumps({"error":{"message":str(e), "code":500}}), 500
 
+
+
 @app.route('/user/files' ,methods=['GET'])
 def get_user_files():
     method = request.method
@@ -278,6 +280,23 @@ def marks():
         return get_marks(r.text)
     except:
         return {"error": {"message": "Server was unable to connect through Epitech API", "code": 500}}
+
+@app.route('/project/marks', methods=['GET'])
+def project_marks():
+
+    error, session, params = log_and_check_params(["token", "scolaryear", "codemodule", "codeinstance", "codeacti"], request)
+    if error != {}:
+        return json.dumps(error), error['error']['code']
+    try:
+        url = server_url+"/module/%s/%s/%s/%s/note/?format=json" % (params['scolaryear'], params['codemodule'], params['codeinstance'], params['codeacti'])
+        print(url)
+        r = session.get(url, verify=ssl_verify)
+        if r.status_code == 403:
+            return json.dumps({"error": {"message": "Connection token is invalid or has expired", 'code':403}}), 403
+        return r.text
+    except:
+        return {"error": {"message": "Server was unable to connect through Epitech API", "code": 500}}
+
 
 @app.route('/messages', methods=['POST', 'GET'])
 def messages():
